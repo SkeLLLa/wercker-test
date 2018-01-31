@@ -1,0 +1,21 @@
+{
+  "name": "wercker-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"NODEJS: test\"",
+    "lint": "echo \"NODEJS: lint\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SkeLLLa/wercker-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SkeLLLa/wercker-test/issues"
+  },
+  "homepage": "https://github.com/SkeLLLa/wercker-test#readme"
+}

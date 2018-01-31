@@ -1,0 +1,33 @@
+box: node:latest
+
+verify:
+  steps:
+    - script:
+      name: install deps
+      code: |
+        echo "install deps"
+        npm i --loglevel warn
+    - script:
+      name: code quality
+      code: |
+        echo "code quality check"
+        npm run lint
+    - script:
+      name: unit tests
+      code: |
+        echo "unit test check"
+        npm run test
+
+build:
+  steps:
+    - script:
+        name: install production deps
+        code: |
+          echo "install prod deps"
+          npm i --production --loglevel warn
+    - script:
+        name: build docker image
+        code: |
+          echo "env"
+          env
+          
