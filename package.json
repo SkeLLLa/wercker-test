@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"NODEJS: test\"",
-    "lint": "echo \"NODEJS: lint\""
+    "lint": "echo \"NODEJS: lint\"",
+    "preversion": "npm run lint",
+    "version": "git add -u",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
