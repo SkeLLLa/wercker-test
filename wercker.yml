@@ -21,6 +21,10 @@ verify:
 build:
   steps:
     - script:
+      name: version
+      code: |
+        export APP_VERSION=$(npm -s run package-version)
+    - script:
         name: install production deps
         code: |
           echo "install prod deps"
@@ -30,4 +34,10 @@ build:
         code: |
           echo "env"
           env
-          
+
+deploy:
+  steps:
+    - script:
+      name: test
+      code: |
+        ls -la

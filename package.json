@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"NODEJS: test\"",
     "lint": "echo \"NODEJS: lint\"",
+    "package-version": "echo $npm_package_version",
     "preversion": "npm run lint",
     "version": "git add -u",
     "postversion": "git push && git push --tags"
