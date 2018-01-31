@@ -21,6 +21,10 @@ verify:
 build:
   steps:
     - script:
+      name: cleanup
+      code: |
+        rm -rf node_modules
+    - script:
       name: version
       code: |
         export APP_VERSION=$(npm -s run package-version)
